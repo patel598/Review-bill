@@ -19,6 +19,10 @@ const RightPanel: React.FC<RightPanelProps> = () => {
 
 
 
+  const handlePayment = (name: string) => {
+    if (name === details) setDetails("");
+    else setDetails(name);
+  }
   const handleDetail = (name: string) => {
     if (name === details) setDetails("");
     else setDetails(name);
@@ -80,7 +84,7 @@ const RightPanel: React.FC<RightPanelProps> = () => {
         </div>
         <hr />
         <details>
-          <summary className="flex justify-between items-center" onClick={() => handleDetail("pay")}>
+          <summary className="flex justify-between items-center" onClick={() => handlePayment("pay")}>
             <h3 className="text-sm font-[500] my-4">Payment Details</h3>
 
             <div className={`transition-all duration-5000

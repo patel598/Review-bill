@@ -28,15 +28,11 @@ const Layout = () => {
 
             <RightPanel
                 isOpen={isRightPanelOpen}
-            // onClose={() => setIsRightPanelOpen(false)}
             />
             <AddDocumentModal
                 isOpen={isAddModalOpen}
                 onClose={() => setIsAddModalOpen(false)}
             />
-
-
-
         </section>
     )
 }

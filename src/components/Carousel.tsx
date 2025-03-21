@@ -34,8 +34,6 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                     ></div>
                 ))}
             </div>
-
-
             <button onClick={handleNext} aria-label="Next Slide">
                 <img src={right} alt="Next" />
             </button>

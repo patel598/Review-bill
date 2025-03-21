@@ -10,13 +10,13 @@ import Help from '../assets/Help.svg';
 
 
 export const menuItems = [
-    { icon: Dashboard, label: 'Dashboard', active: false },
-    { icon: Accounting, label: 'Accounting', active: true },
-    { icon: Banking, label: 'Banking', active: false },
-    { icon: Report, label: 'Reports', active: false },
-    { icon: Contacts, label: 'Contacts', active: false },
-    { icon: Invoice, label: 'Invoicing', active: false },
-    { icon: Help, label: 'Queries', active: false },
+    { icon: Dashboard, label: 'Dashboard', active: false, link:"/Dashboard" },
+    { icon: Accounting, label: 'Accounting', active: true, link:"/" },
+    { icon: Banking, label: 'Banking', active: false, link:"/" },
+    { icon: Report, label: 'Reports', active: false, link:"/" },
+    { icon: Contacts, label: 'Contacts', active: false, link:"/" },
+    { icon: Invoice, label: 'Invoicing', active: false, link:"/" },
+    { icon: Help, label: 'Queries', active: false, link:"/" },
   ];
 
 
