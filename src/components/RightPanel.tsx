@@ -10,9 +10,10 @@ import Carousel from "./Carousel";
 interface RightPanelProps {
   isOpen?: boolean;
   onClose?: () => void;
+  className: string;
 }
 
-const RightPanel: React.FC<RightPanelProps> = () => {
+const RightPanel: React.FC<RightPanelProps> = ({className}) => {
   const [paymentStatus, setPaymentStatus] = useState("paid");
   const [lineItem, setLineItem] = useState("single");
   const [details, setDetails] = useState("")
@@ -29,12 +30,12 @@ const RightPanel: React.FC<RightPanelProps> = () => {
   }
 
   return (
-    <aside className="max-h-screen overflow-auto w-[20rem] bg-white p-4">
+    <aside className={`max-h-screen overflow-auto w-[20rem] bg-white p-4 ${className}`}>
       <div className="flex flex-col gap-4 border border-gray p-2 mb-4">
         <div className="flex justify-between">
           <div className="flex gap-1 justify-between">
             <div className="rounded-full">
-              <img src={qb} alt="" />
+              <img src={qb} alt="Quickbook" />
             </div>
             <div>
               <h2 className="text-lg font-semibold mb-1">Quickbook</h2>
@@ -75,11 +76,11 @@ const RightPanel: React.FC<RightPanelProps> = () => {
         <div className="flex justify-between mb-4">
 
           <div className="">
-            <img src={left} alt="" />
+            <img src={left} alt="left" />
           </div>
           <h3 className="text-sm font-semibold ">Payment Details</h3>
           <div className="">
-            <img src={right} alt="" />
+            <img src={right} alt="right " />
           </div>
         </div>
         <hr />
@@ -89,7 +90,7 @@ const RightPanel: React.FC<RightPanelProps> = () => {
 
             <div className={`transition-all duration-5000
               ease-in-out ${details === "pay" ? "rotate-0" : "rotate-180"}`}>
-              <img src={up} alt="" />
+              <img src={up} alt="up" />
             </div>
           </summary>
           <div className="flex items-center space-x-4 mt-2">
@@ -139,7 +140,7 @@ const RightPanel: React.FC<RightPanelProps> = () => {
 
           <div className={`transition-all duration-5000
               ease-in-out ${details === "des" ? "rotate-0" : "rotate-180"}`}>
-            <img src={up} alt="" />
+            <img src={up} alt="up" />
           </div>
         </summary>
         <div className="flex items-center space-x-4 mt-2">

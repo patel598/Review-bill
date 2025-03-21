@@ -62,7 +62,7 @@ const AddDocumentModal: React.FC<AddDocumentModalProps> = ({ isOpen, onClose }) 
                 readOnly
                 className="ml-2 text-sm text-gray-600"
               />
-              <img className='w-4 h-5' src={copy} alt="" onClick={() => copyToClipboard("abc.single@gmail.com")} />
+              <img width="1rem" height="1.25rem" className='w-4 h-5' src={copy} alt="copy" onClick={() => copyToClipboard("abc.single@gmail.com")} />
             </div>
             <div className="flex items-center">
               <span className="text-sm">Multiple: </span>
@@ -72,7 +72,7 @@ const AddDocumentModal: React.FC<AddDocumentModalProps> = ({ isOpen, onClose }) 
                 readOnly
                 className="ml-2 text-sm text-gray-600"
               />
-              <img className='w-4 h-5' src={copy} alt="" onClick={() => copyToClipboard("abc.multiple@gmail.com")} />
+              <img width="1rem" height="1.25rem"  className='w-4 h-5' src={copy} alt="copy2" onClick={() => copyToClipboard("abc.multiple@gmail.com")} />
             </div>
           </div>
         </div>

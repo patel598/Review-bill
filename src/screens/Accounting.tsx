@@ -1,6 +1,8 @@
 import { useState } from "react";
 import InvoiceList from "../components/InvoiceList"
 import invoiceImage from '../assets/invoice-img.svg'
+import HelmetComponent from "../components/Helmet";
+import RightPanel from "../components/RightPanel";
 
 
 
@@ -22,7 +24,8 @@ const Accounting = () => {
   };
 
   return (
-    <div className="bg-white m-3  max-h-[calc(100dvh-6rem)] overflow-auto">
+    <div className="bg-white m-3 max-h-[calc(100dvh-6rem)] overflow-auto">
+      <HelmetComponent title="Accounts Page" name="description" content="This page related to account, where we are showing receipt, bill and invoice etc." />
       <div className="text-right">
         <button className=" m-4 px-4 py-2 text-sm text-white bg-[#603AE5] rounded-lg">
           Add to Expenses Report
@@ -40,10 +43,13 @@ const Accounting = () => {
           onTabChange={setActiveTab}
         />
         <div className="align-center border border-dashed border-1 border-gray p-2 max-h-[calc(100dvh-13rem)] overflow-auto">
-          <img className="w-full h-full object-contain" src={invoiceImage} alt={selectedInvoice} />
+          <img width="auto" height='auto' className="w-full h-full object-contain" src={invoiceImage} alt={selectedInvoice} />
         </div>
 
       </div>
+      <RightPanel
+        className="hidden rp-tablet "
+      />
     </div>
   )
 }

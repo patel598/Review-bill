@@ -5,12 +5,15 @@ import './index.css';
 
 import { BrowserRouter as Router } from 'react-router';
 import { ToastContainer } from 'react-toastify';
+import { HelmetProvider } from 'react-helmet-async';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Router>
-      <App />
-      <ToastContainer />
-    </Router>
+    <HelmetProvider >
+      <Router>
+        <App />
+        <ToastContainer />
+      </Router>
+    </HelmetProvider>
   </StrictMode>
 );

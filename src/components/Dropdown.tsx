@@ -6,6 +6,7 @@ interface Props {
     bgcolor?: string;
     text?: string;
     color?: string;
+    border?: string;
 }
 
 const ArrowIcon: React.FC<Props> = ({color = "currentColor"}) => {
@@ -30,10 +31,10 @@ const ArrowIcon: React.FC<Props> = ({color = "currentColor"}) => {
 
 
 
-const DropdownComponent: React.FC<Props> = ({ bgcolor, text, color }) => {
+const DropdownComponent: React.FC<Props> = ({ bgcolor, text, color, border }) => {
     return (
         <div className={`relative min-w-[94px] ${bgcolor} rounded-lg`}>
-            <select style={{color:color}} className={`appearance-none bg-transparent border border-gray-200 rounded-lg px-4 py-2 pr-8 focus:outline-none`}>
+            <select style={{color:color}} className={`appearance-none bg-transparent border border-gray-200 rounded-lg px-4 py-2 pr-8 ${border} focus:outline-none`}>
                 <option>{text}</option>
             </select>
             <ArrowIcon color={color} />

@@ -59,7 +59,7 @@ const InvoiceList: React.FC<InvoiceListProps> = ({
               }`}
           >
             <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
-              <img src={invoiceImage} alt="" />
+              <img width="auto" height="auto" src={invoiceImage} alt={`invoice ${invoice.id}`} />
             </div>
             <div className="ml-3">
               <div className="text-sm font-medium">Bill {invoice.id}</div>
