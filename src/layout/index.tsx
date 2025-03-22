@@ -19,27 +19,26 @@ const Layout = () => {
 
   // Update cursor position when the mouse moves
   const updateCursorPosition = (e: { clientX: any; clientY: any; }) => {
-    setCursorPosition({ x: e.clientX, y: e.clientY });
+    if ((e.clientX < window.innerWidth - 24) && (e.clientY < window.innerHeight - 24)) {
+      setCursorPosition({ x: e.clientX, y: e.clientY });
+    }
   };
 
   useEffect(() => {
-    // Add event listener to track cursor movement
     window.addEventListener("mousemove", updateCursorPosition);
-
     return () => {
-      // Remove the event listener when the component unmounts
       window.removeEventListener("mousemove", updateCursorPosition);
     };
+
   }, []);
 
-  // Define different colors and animations
-  const colors = ["🔍"];
+  const colors = [""];
   const animations = ["animate-pulse duration-200", "animate-bounce duration-300", "animate-ping"];
 
   const lines = colors.map((color, index) => (
     <div
       key={index}
-      className={`line ${color} w-12 h-12 absolute drop-shadow-xl ${animations[index]} `}
+      className={`line ${color} w-4 h-4 absolute border border-black ${animations[index]} `}
       style={{ top: cursorPosition.y, left: cursorPosition.x, transform: `rotate(${index * 45}deg)`, borderRadius: '100%', zIndex: 9999 }}
     >🔍</div>
   ));
