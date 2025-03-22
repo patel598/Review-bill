@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*,
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    font-family: "Hanken Grotesk", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1337px) {
+    .u_s_n-desktop {
+        display: none;
+    }
+
+    .u_s_n-screen {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .u_s_n_ad-desktop {
+        display: none;
+    }
+
+    .u_s_n_ad-screen {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 1084px) {
+    .u_s_n_ad_e-desktop {
+        display: none;
+    }
+
+    .u_s_n_ad_e-screen {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+    .u_s_n_ad_e_c-desktop {
+        display: none;
+    }
+
+    .u_s_n_ad_e_c-screen {
+        display: block;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .u_s_n_ad_e_c-desktop {
+        display: block;
+    }
+
+    .u_s_n_ad_e_c-screen {
+        display: none;
+    }
+
+    .rp-desktop {
+        display: none;
+    }
+
+    .rp-tablet {
+        display: block;
+    }
+
+    .account-container {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .u_s_n_ad_e_c-desktop {
+        display: none;
+    }
+
+    .u_s_n_ad_e_c-screen {
+        display: block;
+    }
+
+}
